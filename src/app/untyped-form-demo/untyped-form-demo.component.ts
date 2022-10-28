@@ -24,7 +24,7 @@ export class UntypedFormDemoComponent implements OnInit {
 
   ngOnInit(): void {
     // compile error
-    // this.form.get('zip')?.disabled();
+    // this.form.get('zip').disable();
     (this.form.get('zip') as FormControl).disable();
 
     this.form.get('city')?.valueChanges?.subscribe(city => {
